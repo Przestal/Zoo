@@ -3,7 +3,7 @@ package com.zoo.animals;
 public class Tiger extends Animal {
 
     public Tiger() {
-        this("srt", 3);
+        this("defaultTigerName", 3);
 
         // instancja klasy bazowej - super
         // super(70);

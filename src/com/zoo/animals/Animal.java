@@ -17,6 +17,11 @@ public class Animal {
         System.out.println("Hello from Animal hungerLevel constructor");
     }
 
+    public Animal(String name, Integer hungerLevel) {
+        this.name = name;
+        this.hungerLevel = hungerLevel;
+    }
+
     public Integer getHungerLevel() {
         return hungerLevel;
     }
@@ -91,6 +96,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return super.toString();
+        //return super.toString();
+        return this.getClass().getCanonicalName() + ": I'm Animal";
     }
 }

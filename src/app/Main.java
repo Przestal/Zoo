@@ -1,9 +1,11 @@
 package app;
 
 
+import app.tools.AnimalFactory;
 import com.zoo.animals.Animal;
-import com.zoo.animals.Tiger;
 import com.zoo.animals.rare.SiberianTiger;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +23,14 @@ public class Main {
         // myTiger.makeSound();
         // myTiger.feed();
         //((Tiger)myTiger).move();
+
+        List<Animal> animalList = AnimalFactory.getAnimals();
+
+        for (Animal animal : animalList) {
+            System.out.println(animal.getName().toString());
+            animal.makeSound();
+            System.out.println("-------------------");
+        }
 
     }
 }
